@@ -1,0 +1,86 @@
+:root{
+    --primary-background-color: #F5F5F5 ;
+    --secondary-background-color:#F5F4FA ;
+    --header-background-color:#FFFFFF;
+    --hero-footer-background-color:#2F303A;  
+    
+    --title-color:#FFFFFF;
+    --primary-text-color: #212121;
+    --secondary-text-color:#757575;
+    --accent-text-color:#2196F3; 
+    --header-second-part-color:#000000;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 0px;
+}
+
+ul{
+    margin: 0px;
+    padding-left: 0px;
+}
+
+body{
+    font-family: Roboto, sans-serif;
+    color: var(--primary-text-color);
+    background-color: #FFFFFF;
+    
+}
+
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px
+}
+
+img{ 
+    display: block;
+}
+
+.link{
+    text-decoration: none;
+    }
+.list{  
+    list-style: none;
+    }
+
+ 
+.visualy-hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+//mixins//
+
+@mixin font($fw, $fs, $lh, $ls){
+    font-weight: $fw;
+    font-size: $fs + px;
+    line-height: $lh;
+    letter-spacing: $ls + em;
+}
+
+@mixin button {
+    border: transparent;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+    color: var(--title-color);
+    background-color: var(--accent-text-color);
+}
+
+@mixin transition($property) {
+  $duration: 250ms;
+  transition-property: $property;
+  transition-duration: $duration;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+} 

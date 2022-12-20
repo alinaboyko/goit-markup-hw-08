@@ -1,0 +1,47 @@
+
+.portfolio__hero {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.portfolio__list{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 34px;
+
+    & .btn-current{
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    background-color: var(--accent-text-color);
+}
+}
+
+.portfolio__item:not(:last-child){
+    margin-right: 8px;
+}
+    
+.portfolio__item--btn{
+    @include button;
+    @include transition(background-color, color);
+    @include font(500, 16, 1.6, 0.03em);
+    padding: 6px 22px;
+    font-family: inherit; 
+    align-items: center;
+    text-align: center;
+    color: var(--primary-text-color);
+    background-color: var(--secondary-background-color);
+    &:hover,
+    &:focus{color:var(--title-color);
+    background-color: var(--accent-text-color);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+}
+
+
+    
+
