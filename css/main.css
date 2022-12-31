@@ -434,6 +434,12 @@ img {
   background-position: center;
   background-color: var(--hero-footer-background-color);
 }
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/Header_img_tel2x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Header_img_tel2x.jpg");
+  }
+}
 @media screen and (min-width: 768px) {
   .hero {
     width: 100%;
@@ -442,12 +448,24 @@ img {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Header_img_tab.jpg");
   }
 }
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/Header_img_tab2x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Header_img_tab2x.jpg");
+  }
+}
 @media screen and (min-width: 1200px) {
   .hero {
     padding: 200px 0;
     height: 600px;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/herobg.jpg");
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/herobg.jpg");
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/herobg2x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/herobg2x.jpg");
   }
 }
 
@@ -839,7 +857,7 @@ img {
 }
 
 .portfolio__hero {
-  padding-top: 60px;
+  padding: 60px 0;
 }
 @media screen and (min-width: 768px) {
   .portfolio__hero {
@@ -1290,6 +1308,7 @@ img {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   padding: 93px 15px;
+  z-index: 1;
   overflow-y: scroll;
 }
 
@@ -1314,7 +1333,6 @@ img {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   max-width: 450px;
-  max-height: 609px;
   padding: 40px;
   background-color: #FFFFFF;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1324,13 +1342,11 @@ img {
 @media screen and (min-width: 768px) {
   .modal__container {
     max-width: 450px;
-    max-height: 609px;
   }
 }
 @media screen and (min-width: 1200px) {
   .modal__container {
     max-width: 528px;
-    max-height: 581px;
   }
 }
 
@@ -1536,19 +1552,11 @@ img {
   .policy-text {
     font-weight: 400;
     font-size: 14px;
-    line-height: 1.6;
-    letter-spacing: 0.03em;
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    /* identical to box height, or 171% */
+    line-height: 1.71;
     letter-spacing: 0.03em;
   }
 }
-
-.check-box {
+.policy-text .check-box {
   width: 16px;
   height: 15px;
   border: 2px solid #212121;
@@ -1565,26 +1573,23 @@ img {
           align-items: center;
   cursor: pointer;
 }
-.check-box svg {
+.policy-text .check-box svg {
   width: 11px;
   height: 100%;
   fill: transparent;
 }
-
-.check-input:checked + label > span {
+.policy-text .check-input:checked + label > span {
   border: none;
   background-color: var(--accent-text-color);
 }
-.check-input:checked + label > span svg {
+.policy-text .check-input:checked + label > span svg {
   fill: var(--title-color);
 }
-
-.policy-text a {
+.policy-text .policy-text a {
   color: var(--accent-text-color);
   margin-left: 4px;
 }
-
-.submit-btn {
+.policy-text .submit-btn {
   border: transparent;
   text-align: center;
   cursor: pointer;

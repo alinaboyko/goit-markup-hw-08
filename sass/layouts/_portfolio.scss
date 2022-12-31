@@ -1,7 +1,6 @@
 
 .portfolio__hero {
-    padding-top: 60px;
-    // padding-bottom: 94px;
+    padding: 60px 0;
 
     @media screen and (min-width: 768px) {
         padding: 60px 0;
@@ -15,7 +14,7 @@
 .portfolio__list{
     display: flex;
     flex-wrap: wrap;
-    // justify-content: center;
+   
     margin-bottom: 40px;
     width: 326px;
 
@@ -54,7 +53,6 @@
 
 @media screen and (max-width: 767px) {
     .portfolio__item:not(:last-child){
-        // margin-right: 8px;
         margin-bottom: 15px;
     }
 }
