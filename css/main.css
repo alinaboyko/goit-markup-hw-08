@@ -1398,6 +1398,10 @@ img {
   cursor: pointer;
 }
 
+.modal-close-icon {
+  fill: #000000;
+}
+
 .modal-heading {
   font-weight: 700;
   font-size: 20px;
